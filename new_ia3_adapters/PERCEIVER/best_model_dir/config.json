@@ -1,0 +1,102 @@
+{
+  "_name_or_path": "bert-base-uncased",
+  "adapters": {
+    "adapters": {
+      "PERCEIVER": "1ebb5af107e576c0"
+    },
+    "config_map": {
+      "1ebb5af107e576c0": {
+        "alpha": 1,
+        "architecture": "lora",
+        "attn_matrices": [
+          "k",
+          "v"
+        ],
+        "composition_mode": "scale",
+        "dropout": 0.0,
+        "init_weights": "ia3",
+        "intermediate_lora": true,
+        "leave_out": [],
+        "output_lora": false,
+        "r": 1,
+        "selfattn_lora": true,
+        "use_gating": false
+      }
+    },
+    "fusion_config_map": {},
+    "fusions": {}
+  },
+  "architectures": [
+    "BertAdapterModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "custom_heads": {},
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "Strongly Disagree",
+    "1": "Disagree",
+    "2": "Slightly Disagree",
+    "3": "Neutral",
+    "4": "Slightly Agree",
+    "5": "Agree",
+    "6": "Strongly Agree"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "Agree": 5,
+    "Disagree": 1,
+    "Neutral": 3,
+    "Slightly Agree": 4,
+    "Slightly Disagree": 2,
+    "Strongly Agree": 6,
+    "Strongly Disagree": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "prediction_heads": {
+    "PERCEIVER": {
+      "activation_function": "tanh",
+      "bias": true,
+      "dropout_prob": null,
+      "head_type": "classification",
+      "label2id": {
+        "Agree": 5,
+        "Disagree": 1,
+        "Neutral": 3,
+        "Slightly Agree": 4,
+        "Slightly Disagree": 2,
+        "Strongly Agree": 6,
+        "Strongly Disagree": 0
+      },
+      "layers": 2,
+      "num_labels": 7,
+      "use_pooler": false
+    },
+    "default": {
+      "activation_function": "gelu",
+      "bias": true,
+      "embedding_size": 768,
+      "head_type": "masked_lm",
+      "label2id": null,
+      "layer_norm": true,
+      "layers": 2,
+      "shift_labels": false,
+      "vocab_size": 30522
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.36.2",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
