@@ -1,0 +1,26 @@
+{
+  "config": {
+    "alpha": 8,
+    "architecture": "lora",
+    "attn_matrices": [
+      "q",
+      "v"
+    ],
+    "composition_mode": "add",
+    "dropout": 0.0,
+    "init_weights": "lora",
+    "intermediate_lora": false,
+    "leave_out": [],
+    "output_lora": false,
+    "r": 8,
+    "selfattn_lora": true,
+    "use_gating": false
+  },
+  "config_id": "625403edad0bf919",
+  "hidden_size": 768,
+  "model_class": "BertAdapterModel",
+  "model_name": "bert-base-uncased",
+  "model_type": "bert",
+  "name": "INFP1_1_6_2",
+  "version": "0.1.2"
+}

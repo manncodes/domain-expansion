@@ -1,0 +1,38 @@
+{
+  "adapter": "lora",
+  "batch_device": 16,
+  "config": {
+    "alpha": 8,
+    "architecture": "lora",
+    "attn_matrices": [
+      "q",
+      "v"
+    ],
+    "composition_mode": "add",
+    "dropout": 0.0,
+    "init_weights": "lora",
+    "intermediate_lora": false,
+    "leave_out": [],
+    "output_lora": false,
+    "r": 8,
+    "selfattn_lora": true,
+    "use_gating": false
+  },
+  "dataset_path": "../new_classification_dataset/mbti_questions_thinker.json",
+  "domain": "THINKER",
+  "epochs": 100,
+  "eval_steps": 300,
+  "eval_strat": "steps",
+  "hidden_size": 768,
+  "lr": 0.001,
+  "model_class": "BertAdapterModel",
+  "model_name": "bert-base-uncased",
+  "model_type": "bert",
+  "name": "THINKER",
+  "output_directory": "./lora/THINKER/20240408-175313",
+  "save_steps": 300,
+  "save_strat": "steps",
+  "test_data_ratio": 0.1,
+  "version": "0.1.2",
+  "weight_decay": 0.01
+}
